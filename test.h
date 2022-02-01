@@ -3,9 +3,9 @@
 
 extern void add_test(void (*f)(void));
 
-#define assert(b) do { if (b) { printf("SUCCESS\n"); tests_passed++; } else { printf("FAILED\n"); tests_failed++; } } while(0)
+#define test_assert(b) do { if (b) { printf("SUCCESS\n"); tests_passed++; } else { printf("FAILED\n"); tests_failed++; } } while(0)
 
-#define test(f) static void f(void);\
+#define UNIT_TEST(f) static void f(void);\
 	static void __attribute__((constructor)) __construct_##f(void) { add_test(f); }\
 	static void __real_##f(void);\
 	static void f(void) { printf("%s... ", __func__); fflush(stdout); __real_##f(); }\

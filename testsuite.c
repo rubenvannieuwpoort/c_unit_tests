@@ -2,15 +2,15 @@
 #include <unistd.h>
 #include <stdbool.h>
 
-test(hello) {
-	assert(true);
+UNIT_TEST(hello) {
+	test_assert(true);
 }
 
-test(goodbye) {
-	assert(true);
+UNIT_TEST(goodbye) {
+	test_assert(true);
 }
 
-test(loopy) {
+UNIT_TEST(loopy) {
 	sleep(1);
-	assert(true);
+	test_assert(true);
 }
