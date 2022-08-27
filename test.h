@@ -40,5 +40,5 @@ int main() {
 		printf("No tests found\n");
 	else
 		printf("%i tests passed, %i tests failed\n", tests_passed, tests_failed);
-	return tests_failed > 0;
+	return 0;
 }
