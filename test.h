@@ -12,7 +12,7 @@ extern void add_test(test_node *tn);
 #define test_assert(b) do { if (b) { printf("SUCCESS\n"); tests_passed++; } else { printf("FAILED\n"); tests_failed++; } } while(0)
 
 #define UNIT_TEST(f) static void f(void);\
-  	static void __attribute__((constructor)) __construct_##f(void) { static test_node tn; tn.next = NULL; tn.func = f ; add_test(&tn); } \
+	static void __attribute__((constructor)) __construct_##f(void) { static test_node tn; tn.next = NULL; tn.func = f; add_test(&tn); }\
 	static void __real_##f(void);\
 	static void f(void) { printf("%s... ", __func__); fflush(stdout); __real_##f(); }\
 	static void __real_##f(void)
