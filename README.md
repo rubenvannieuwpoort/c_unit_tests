@@ -2,7 +2,7 @@
 
 Minimalistic unit tests in C. Uses the `__attribute__((constructor))` which, as far as I know, is supported by `GCC` and `clang`. So this probably only works for those compilers.
 
-![](https://raw.githubusercontent.com/rubenvannieuwpoort/files/master/demonstration.gif)
+![](demonstration.gif)
 
 ## Example
 
